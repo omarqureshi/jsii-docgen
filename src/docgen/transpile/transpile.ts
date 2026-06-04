@@ -32,6 +32,12 @@ export class Language {
   public static readonly GO = new Language({ name: 'go', targetName: 'go', validator: validateGoConfig });
 
   /**
+   * Ruby
+   */
+  public static readonly RUBY = new Language({ name: 'ruby', targetName: 'ruby', validator: validateRubyConfig });
+
+
+  /**
    * Transform a literal string to the `Language` object.
    *
    * Throws an `UnsupportedLanguageError` if the language is not supported.
@@ -53,13 +59,17 @@ export class Language {
       case Language.GO.name:
       case Language.GO.targetName:
         return Language.GO;
+      case Language.RUBY.name:
+      case Language.RUBY.targetName:
+        return Language.RUBY;
+
       default:
         throw new UnsupportedLanguageError(lang, Language.values());
     }
   }
 
   public static values() {
-    return [Language.TYPESCRIPT, Language.PYTHON, Language.JAVA, Language.CSHARP, Language.GO];
+    return [Language.TYPESCRIPT, Language.PYTHON, Language.JAVA, Language.CSHARP, Language.GO, Language.RUBY];
   }
 
   public readonly name: string;
@@ -112,6 +122,12 @@ function validateGoConfig(config: Record<string, any>): boolean {
   // See: https://aws.github.io/jsii/user-guides/lib-author/configuration/targets/go/
   return typeof config.moduleName === 'string';
 }
+
+function validateRubyConfig(config: Record<string, any>): boolean {
+  // See: https://aws.github.io/jsii/user-guides/lib-author/configuration/targets/ruby/
+  return typeof config.gem === 'string' && typeof config.module === 'string';
+}
+
 
 export class UnsupportedLanguageError extends Error {
   constructor(lang: string, supported: Language[]) {

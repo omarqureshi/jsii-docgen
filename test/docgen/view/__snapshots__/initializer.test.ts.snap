@@ -676,6 +676,216 @@ scoped id of the resource.
 "
 `;
 
+exports[`ruby snapshot 1`] = `
+{
+  "displayName": "Initializer",
+  "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer",
+  "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer",
+  "parameters": [
+    {
+      "default": undefined,
+      "displayName": "scope",
+      "docs": {
+        "summary": "- scope in which this resource is defined.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.scope",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.scope",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "%",
+        "types": [
+          {
+            "displayName": "Construct",
+            "fqn": "AWSCDK::Core::Construct",
+            "id": "@aws-cdk/core.Construct",
+            "packageName": "@aws-cdk/core",
+            "packageVersion": "99.99.99",
+          },
+        ],
+      },
+      "variadic": false,
+    },
+    {
+      "default": undefined,
+      "displayName": "id",
+      "docs": {
+        "summary": "- scoped id of the resource.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.id",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.id",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "String",
+      },
+      "variadic": false,
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_catalog_data",
+      "docs": {
+        "links": [
+          "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata",
+        ],
+        "summary": "\`AWS::ECR::PublicRepository.RepositoryCatalogData\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.repository_catalog_data",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryCatalogData",
+      "optional": true,
+      "type": {
+        "formattingPattern": "Object",
+      },
+      "variadic": false,
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_name",
+      "docs": {
+        "links": [
+          "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositoryname",
+        ],
+        "summary": "\`AWS::ECR::PublicRepository.RepositoryName\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.repository_name",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryName",
+      "optional": true,
+      "type": {
+        "formattingPattern": "String",
+      },
+      "variadic": false,
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_policy_text",
+      "docs": {
+        "links": [
+          "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorypolicytext",
+        ],
+        "summary": "\`AWS::ECR::PublicRepository.RepositoryPolicyText\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.repository_policy_text",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryPolicyText",
+      "optional": true,
+      "type": {
+        "formattingPattern": "Object",
+      },
+      "variadic": false,
+    },
+    {
+      "default": undefined,
+      "displayName": "tags",
+      "docs": {
+        "links": [
+          "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-tags",
+        ],
+        "summary": "\`AWS::ECR::PublicRepository.Tags\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.Initializer.parameter.tags",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.tags",
+      "optional": true,
+      "type": {
+        "formattingPattern": "Array<%>",
+        "types": [
+          {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "CfnTag",
+                "fqn": "AWSCDK::Core::CfnTag",
+                "id": "@aws-cdk/core.CfnTag",
+                "packageName": "@aws-cdk/core",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+        ],
+      },
+      "variadic": false,
+    },
+  ],
+  "usage": "require 'aws-cdk-aws-ecr'
+
+CfnPublicRepository.new(scope, id, repository_catalog_data = nil, repository_name = nil, repository_policy_text = nil, tags = nil)",
+}
+`;
+
+exports[`ruby snapshot 2`] = `
+" Initializers <a name="Initializers" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer"></a>
+
+\`\`\`ruby
+require 'aws-cdk-aws-ecr'
+
+CfnPublicRepository.new(scope, id, repository_catalog_data = nil, repository_name = nil, repository_policy_text = nil, tags = nil)
+\`\`\`
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.scope">scope</a></code> | <code>AWSCDK::Core::Construct</code> | - scope in which this resource is defined. |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.id">id</a></code> | <code>String</code> | - scoped id of the resource. |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryCatalogData">repository_catalog_data</a></code> | <code>Object</code> | \`AWS::ECR::PublicRepository.RepositoryCatalogData\`. |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryName">repository_name</a></code> | <code>String</code> | \`AWS::ECR::PublicRepository.RepositoryName\`. |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryPolicyText">repository_policy_text</a></code> | <code>Object</code> | \`AWS::ECR::PublicRepository.RepositoryPolicyText\`. |
+| <code><a href="#@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.tags">tags</a></code> | <code>Array<AWSCDK::Core::CfnTag></code> | \`AWS::ECR::PublicRepository.Tags\`. |
+
+---
+
+# \`scope\`<sup>Required</sup> <a name="scope" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.scope"></a>
+
+- *Type:* AWSCDK::Core::Construct
+
+scope in which this resource is defined.
+
+---
+
+# \`id\`<sup>Required</sup> <a name="id" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.id"></a>
+
+- *Type:* String
+
+scoped id of the resource.
+
+---
+
+# \`repository_catalog_data\`<sup>Optional</sup> <a name="repository_catalog_data" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryCatalogData"></a>
+
+- *Type:* Object
+
+\`AWS::ECR::PublicRepository.RepositoryCatalogData\`.
+
+> [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata)
+
+---
+
+# \`repository_name\`<sup>Optional</sup> <a name="repository_name" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryName"></a>
+
+- *Type:* String
+
+\`AWS::ECR::PublicRepository.RepositoryName\`.
+
+> [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositoryname](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositoryname)
+
+---
+
+# \`repository_policy_text\`<sup>Optional</sup> <a name="repository_policy_text" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.repositoryPolicyText"></a>
+
+- *Type:* Object
+
+\`AWS::ECR::PublicRepository.RepositoryPolicyText\`.
+
+> [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorypolicytext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorypolicytext)
+
+---
+
+# \`tags\`<sup>Optional</sup> <a name="tags" id="@aws-cdk/aws-ecr.CfnPublicRepository.Initializer.parameter.tags"></a>
+
+- *Type:* Array<AWSCDK::Core::CfnTag>
+
+\`AWS::ECR::PublicRepository.Tags\`.
+
+> [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-tags)
+
+---
+"
+`;
+
 exports[`typescript snapshot 1`] = `
 {
   "displayName": "Initializer",
