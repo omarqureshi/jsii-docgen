@@ -46,11 +46,24 @@ test('package installation does not run lifecycle hooks, includes optional depen
     // inject an optional peer dependency
     manifest.peerDependencies.cdk8s = '^1.10.76';
     manifest.peerDependenciesMeta = { cdk8s: { optional: true } };
-    // write out the new manifest file...
+
+    // Deep copy original manifest to rewrite later so packaged metadata is clean
+    const originalManifest = JSON.parse(JSON.stringify(manifest));
+
+    // Add dependencies temporarily so npm install installs them instead of pruning
+    manifest.devDependencies = manifest.devDependencies || {};
+    manifest.devDependencies['jsii-rosetta'] = 'file:' + path.resolve(__dirname, '../../../../jsii-rosetta/dist/js/jsii-rosetta-0.0.0.tgz');
+    manifest.devDependencies.jsii = 'file:' + path.resolve(__dirname, '../../../../jsii-compiler/dist/js/jsii-0.0.0.tgz');
+    manifest.devDependencies.cdk8s = '^1.10.76';
+
+    // write out the temporary manifest file for npm install...
     await fs.writeFile(manifestPath, JSON.stringify(manifest));
 
     // ensure the optional peer dep is installed before attempting yarn package...
-    child.execSync('npm install --no-save cdk8s', { cwd: workdir });
+    child.execSync('npm install cdk8s --legacy-peer-deps', { cwd: workdir });
+
+    // Restore package.json to original manifest before packaging
+    await fs.writeFile(manifestPath, JSON.stringify(originalManifest, null, 2));
 
     // create the package
     child.execSync('yarn package', { cwd: workdir });

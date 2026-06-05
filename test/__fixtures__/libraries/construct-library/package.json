@@ -18,6 +18,10 @@
       "python": {
         "distName": "construct-library",
         "module": "construct_library"
+      },
+      "ruby": {
+        "gem": "construct-library",
+        "module": "ConstructLibrary"
       }
     }
   },

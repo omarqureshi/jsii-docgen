@@ -32,6 +32,10 @@
       },
       "go": {
         "moduleName": "github.com/cdklabs/intersections_lib"
+      },
+      "ruby": {
+        "gem": "lib-with-intersections",
+        "module": "LibWithIntersections"
       }
     }
   },

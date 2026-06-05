@@ -4004,6 +4004,1301 @@ ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY
 "
 `;
 
+exports[`ruby snapshot 1`] = `
+{
+  "displayName": "AWSCDK::AWSEcr::IRepository",
+  "docs": {
+    "summary": "Represents an ECR repository.",
+  },
+  "fqn": "AWSCDK::AWSEcr::IRepository",
+  "id": "@aws-cdk/aws-ecr.IRepository",
+  "implementations": [
+    {
+      "displayName": "Repository",
+      "fqn": "AWSCDK::AWSEcr::Repository",
+      "id": "@aws-cdk/aws-ecr.Repository",
+      "packageName": "@aws-cdk/aws-ecr",
+      "packageVersion": "1.106.0",
+    },
+    {
+      "displayName": "RepositoryBase",
+      "fqn": "AWSCDK::AWSEcr::RepositoryBase",
+      "id": "@aws-cdk/aws-ecr.RepositoryBase",
+      "packageName": "@aws-cdk/aws-ecr",
+      "packageVersion": "1.106.0",
+    },
+    {
+      "displayName": "IRepository",
+      "fqn": "AWSCDK::AWSEcr::IRepository",
+      "id": "@aws-cdk/aws-ecr.IRepository",
+      "packageName": "@aws-cdk/aws-ecr",
+      "packageVersion": "1.106.0",
+    },
+  ],
+  "instanceMethods": [
+    {
+      "displayName": "add_to_resource_policy",
+      "docs": {
+        "summary": "Add a policy statement to the repository's resource policy.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.add_to_resource_policy",
+      "id": "@aws-cdk/aws-ecr.IRepository.addToResourcePolicy",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "statement",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.add_to_resource_policy.parameter.statement",
+          "id": "@aws-cdk/aws-ecr.IRepository.addToResourcePolicy.parameter.statement",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "PolicyStatement",
+                "fqn": "AWSCDK::AWSIAM::PolicyStatement",
+                "id": "@aws-cdk/aws-iam.PolicyStatement",
+                "packageName": "@aws-cdk/aws-iam",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def add_to_resource_policy(statement)",
+    },
+    {
+      "displayName": "grant",
+      "docs": {
+        "summary": "Grant the given principal identity permissions to perform the actions on this repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.grant",
+      "id": "@aws-cdk/aws-ecr.IRepository.grant",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "grantee",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.grant.parameter.grantee",
+          "id": "@aws-cdk/aws-ecr.IRepository.grant.parameter.grantee",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IGrantable",
+                "fqn": "AWSCDK::AWSIAM::IGrantable",
+                "id": "@aws-cdk/aws-iam.IGrantable",
+                "packageName": "@aws-cdk/aws-iam",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": undefined,
+          "displayName": "actions",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.grant.parameter.actions",
+          "id": "@aws-cdk/aws-ecr.IRepository.grant.parameter.actions",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "*String",
+            "types": undefined,
+          },
+          "variadic": true,
+        },
+      ],
+      "usage": "def grant(grantee, *actions)",
+    },
+    {
+      "displayName": "grant_pull",
+      "docs": {
+        "summary": "Grant the given identity permissions to pull images in this repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.grant_pull",
+      "id": "@aws-cdk/aws-ecr.IRepository.grantPull",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "grantee",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.grant_pull.parameter.grantee",
+          "id": "@aws-cdk/aws-ecr.IRepository.grantPull.parameter.grantee",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IGrantable",
+                "fqn": "AWSCDK::AWSIAM::IGrantable",
+                "id": "@aws-cdk/aws-iam.IGrantable",
+                "packageName": "@aws-cdk/aws-iam",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def grant_pull(grantee)",
+    },
+    {
+      "displayName": "grant_pull_push",
+      "docs": {
+        "summary": "Grant the given identity permissions to pull and push images to this repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.grant_pull_push",
+      "id": "@aws-cdk/aws-ecr.IRepository.grantPullPush",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "grantee",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.grant_pull_push.parameter.grantee",
+          "id": "@aws-cdk/aws-ecr.IRepository.grantPullPush.parameter.grantee",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IGrantable",
+                "fqn": "AWSCDK::AWSIAM::IGrantable",
+                "id": "@aws-cdk/aws-iam.IGrantable",
+                "packageName": "@aws-cdk/aws-iam",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def grant_pull_push(grantee)",
+    },
+    {
+      "displayName": "on_cloud_trail_event",
+      "docs": {
+        "remarks": "Requires that there exists at least one CloudTrail Trail in your account
+that captures the event. This method will not create the Trail.",
+        "summary": "Define a CloudWatch event that triggers when something happens to this repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event",
+      "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "id",
+          "docs": {
+            "summary": "The id of the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event.parameter.id",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.id",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No description",
+          "displayName": "description",
+          "docs": {
+            "summary": "A description of the rule's purpose.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event.parameter.description",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.description",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No additional filtering based on an event pattern.",
+          "displayName": "event_pattern",
+          "docs": {
+            "links": [
+              "https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html",
+            ],
+            "remarks": "The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.",
+            "summary": "Additional restrictions for the event to route to the specified target.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event.parameter.event_pattern",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.eventPattern",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "EventPattern",
+                "fqn": "AWSCDK::AWSEvents::EventPattern",
+                "id": "@aws-cdk/aws-events.EventPattern",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "AWS CloudFormation generates a unique physical ID.",
+          "displayName": "rule_name",
+          "docs": {
+            "summary": "A name for the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event.parameter.rule_name",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.ruleName",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No target is added to the rule. Use \`addTarget()\` to add a target.",
+          "displayName": "target",
+          "docs": {
+            "summary": "The target to register for the event.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_event.parameter.target",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.target",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IRuleTarget",
+                "fqn": "AWSCDK::AWSEvents::IRuleTarget",
+                "id": "@aws-cdk/aws-events.IRuleTarget",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def on_cloud_trail_event(id, description = nil, event_pattern = nil, rule_name = nil, target = nil)",
+    },
+    {
+      "displayName": "on_cloud_trail_image_pushed",
+      "docs": {
+        "remarks": "Requires that there exists at least one CloudTrail Trail in your account
+that captures the event. This method will not create the Trail.",
+        "summary": "Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed",
+      "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "id",
+          "docs": {
+            "summary": "The id of the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.id",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.id",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No description",
+          "displayName": "description",
+          "docs": {
+            "summary": "A description of the rule's purpose.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.description",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.description",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No additional filtering based on an event pattern.",
+          "displayName": "event_pattern",
+          "docs": {
+            "links": [
+              "https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html",
+            ],
+            "remarks": "The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.",
+            "summary": "Additional restrictions for the event to route to the specified target.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.event_pattern",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.eventPattern",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "EventPattern",
+                "fqn": "AWSCDK::AWSEvents::EventPattern",
+                "id": "@aws-cdk/aws-events.EventPattern",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "AWS CloudFormation generates a unique physical ID.",
+          "displayName": "rule_name",
+          "docs": {
+            "summary": "A name for the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.rule_name",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.ruleName",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No target is added to the rule. Use \`addTarget()\` to add a target.",
+          "displayName": "target",
+          "docs": {
+            "summary": "The target to register for the event.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.target",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.target",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IRuleTarget",
+                "fqn": "AWSCDK::AWSEvents::IRuleTarget",
+                "id": "@aws-cdk/aws-events.IRuleTarget",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- Watch changes to all tags",
+          "displayName": "image_tag",
+          "docs": {
+            "summary": "Only watch changes to this image tag.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_cloud_trail_image_pushed.parameter.image_tag",
+          "id": "@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.imageTag",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def on_cloud_trail_image_pushed(id, description = nil, event_pattern = nil, rule_name = nil, target = nil, image_tag = nil)",
+    },
+    {
+      "displayName": "on_event",
+      "docs": {
+        "remarks": "Use
+\`rule.addEventPattern(pattern)\` to specify a filter.",
+        "summary": "Defines a CloudWatch event rule which triggers for repository events.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.on_event",
+      "id": "@aws-cdk/aws-ecr.IRepository.onEvent",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "id",
+          "docs": {},
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_event.parameter.id",
+          "id": "@aws-cdk/aws-ecr.IRepository.onEvent.parameter.id",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No description",
+          "displayName": "description",
+          "docs": {
+            "summary": "A description of the rule's purpose.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_event.parameter.description",
+          "id": "@aws-cdk/aws-ecr.IRepository.onEvent.parameter.description",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No additional filtering based on an event pattern.",
+          "displayName": "event_pattern",
+          "docs": {
+            "links": [
+              "https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html",
+            ],
+            "remarks": "The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.",
+            "summary": "Additional restrictions for the event to route to the specified target.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_event.parameter.event_pattern",
+          "id": "@aws-cdk/aws-ecr.IRepository.onEvent.parameter.eventPattern",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "EventPattern",
+                "fqn": "AWSCDK::AWSEvents::EventPattern",
+                "id": "@aws-cdk/aws-events.EventPattern",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "AWS CloudFormation generates a unique physical ID.",
+          "displayName": "rule_name",
+          "docs": {
+            "summary": "A name for the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_event.parameter.rule_name",
+          "id": "@aws-cdk/aws-ecr.IRepository.onEvent.parameter.ruleName",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No target is added to the rule. Use \`addTarget()\` to add a target.",
+          "displayName": "target",
+          "docs": {
+            "summary": "The target to register for the event.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_event.parameter.target",
+          "id": "@aws-cdk/aws-ecr.IRepository.onEvent.parameter.target",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IRuleTarget",
+                "fqn": "AWSCDK::AWSEvents::IRuleTarget",
+                "id": "@aws-cdk/aws-events.IRuleTarget",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def on_event(id, description = nil, event_pattern = nil, rule_name = nil, target = nil)",
+    },
+    {
+      "displayName": "on_image_scan_completed",
+      "docs": {
+        "summary": "Defines an AWS CloudWatch event rule that can trigger a target when the image scan is completed.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed",
+      "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "id",
+          "docs": {
+            "summary": "The id of the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.id",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.id",
+          "optional": undefined,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No description",
+          "displayName": "description",
+          "docs": {
+            "summary": "A description of the rule's purpose.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.description",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.description",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No additional filtering based on an event pattern.",
+          "displayName": "event_pattern",
+          "docs": {
+            "links": [
+              "https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html",
+            ],
+            "remarks": "The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.",
+            "summary": "Additional restrictions for the event to route to the specified target.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.event_pattern",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.eventPattern",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "EventPattern",
+                "fqn": "AWSCDK::AWSEvents::EventPattern",
+                "id": "@aws-cdk/aws-events.EventPattern",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "AWS CloudFormation generates a unique physical ID.",
+          "displayName": "rule_name",
+          "docs": {
+            "summary": "A name for the rule.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.rule_name",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.ruleName",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- No target is added to the rule. Use \`addTarget()\` to add a target.",
+          "displayName": "target",
+          "docs": {
+            "summary": "The target to register for the event.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.target",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.target",
+          "optional": true,
+          "type": {
+            "formattingPattern": "%",
+            "types": [
+              {
+                "displayName": "IRuleTarget",
+                "fqn": "AWSCDK::AWSEvents::IRuleTarget",
+                "id": "@aws-cdk/aws-events.IRuleTarget",
+                "packageName": "@aws-cdk/aws-events",
+                "packageVersion": "99.99.99",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+        {
+          "default": "- Watch the changes to the repository with all image tags",
+          "displayName": "image_tags",
+          "docs": {
+            "remarks": "Leave it undefined to watch the full repository.",
+            "summary": "Only watch changes to the image tags spedified.",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.on_image_scan_completed.parameter.image_tags",
+          "id": "@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.imageTags",
+          "optional": true,
+          "type": {
+            "formattingPattern": "Array<%>",
+            "types": [
+              {
+                "formattingPattern": "String",
+              },
+            ],
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def on_image_scan_completed(id, description = nil, event_pattern = nil, rule_name = nil, target = nil, image_tags = nil)",
+    },
+    {
+      "displayName": "repository_uri_for_digest",
+      "docs": {
+        "remarks": "ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY[@DIGEST]",
+        "summary": "Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.repository_uri_for_digest",
+      "id": "@aws-cdk/aws-ecr.IRepository.repositoryUriForDigest",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "digest",
+          "docs": {
+            "summary": "Image digest to use (tools usually default to the image with the "latest" tag if omitted).",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.repository_uri_for_digest.parameter.digest",
+          "id": "@aws-cdk/aws-ecr.IRepository.repositoryUriForDigest.parameter.digest",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def repository_uri_for_digest(digest = nil)",
+    },
+    {
+      "displayName": "repository_uri_for_tag",
+      "docs": {
+        "remarks": "ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY[:TAG]",
+        "summary": "Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.repository_uri_for_tag",
+      "id": "@aws-cdk/aws-ecr.IRepository.repositoryUriForTag",
+      "parameters": [
+        {
+          "default": undefined,
+          "displayName": "tag",
+          "docs": {
+            "summary": "Image tag to use (tools usually default to "latest" if omitted).",
+          },
+          "fqn": "AWSCDK::AWSEcr::IRepository.repository_uri_for_tag.parameter.tag",
+          "id": "@aws-cdk/aws-ecr.IRepository.repositoryUriForTag.parameter.tag",
+          "optional": true,
+          "type": {
+            "formattingPattern": "String",
+          },
+          "variadic": false,
+        },
+      ],
+      "usage": "def repository_uri_for_tag(tag = nil)",
+    },
+  ],
+  "interfaces": [
+    {
+      "displayName": "IResource",
+      "fqn": "AWSCDK::Core::IResource",
+      "id": "@aws-cdk/core.IResource",
+      "packageName": "@aws-cdk/core",
+      "packageVersion": "1.106.0",
+    },
+  ],
+  "properties": [
+    {
+      "default": undefined,
+      "displayName": "node",
+      "docs": {
+        "summary": "The construct tree node for this construct.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.node",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.node",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "%",
+        "types": [
+          {
+            "displayName": "ConstructNode",
+            "fqn": "AWSCDK::Core::ConstructNode",
+            "id": "@aws-cdk/core.ConstructNode",
+            "packageName": "@aws-cdk/core",
+            "packageVersion": "99.99.99",
+          },
+        ],
+      },
+      "usage": "attr_reader :node",
+    },
+    {
+      "default": undefined,
+      "displayName": "env",
+      "docs": {
+        "remarks": "For resources that are created and managed by the CDK
+(generally, those created by creating new class instances like Role, Bucket, etc.),
+this is always the same as the environment of the stack they belong to;
+however, for imported resources
+(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+that might be different than the stack they were imported into.",
+        "summary": "The environment this resource belongs to.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.env",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.env",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "%",
+        "types": [
+          {
+            "displayName": "ResourceEnvironment",
+            "fqn": "AWSCDK::Core::ResourceEnvironment",
+            "id": "@aws-cdk/core.ResourceEnvironment",
+            "packageName": "@aws-cdk/core",
+            "packageVersion": "99.99.99",
+          },
+        ],
+      },
+      "usage": "attr_reader :env",
+    },
+    {
+      "default": undefined,
+      "displayName": "stack",
+      "docs": {
+        "summary": "The stack in which this resource is defined.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.stack",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.stack",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "%",
+        "types": [
+          {
+            "displayName": "Stack",
+            "fqn": "AWSCDK::Core::Stack",
+            "id": "@aws-cdk/core.Stack",
+            "packageName": "@aws-cdk/core",
+            "packageVersion": "99.99.99",
+          },
+        ],
+      },
+      "usage": "attr_reader :stack",
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_arn",
+      "docs": {
+        "summary": "The ARN of the repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.repository_arn",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.repositoryArn",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "String",
+      },
+      "usage": "attr_reader :repository_arn",
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_name",
+      "docs": {
+        "summary": "The name of the repository.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.repository_name",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.repositoryName",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "String",
+      },
+      "usage": "attr_reader :repository_name",
+    },
+    {
+      "default": undefined,
+      "displayName": "repository_uri",
+      "docs": {
+        "remarks": "ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY",
+        "summary": "The URI of this repository (represents the latest image):.",
+      },
+      "fqn": "AWSCDK::AWSEcr::IRepository.property.repository_uri",
+      "id": "@aws-cdk/aws-ecr.IRepository.property.repositoryUri",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "String",
+      },
+      "usage": "attr_reader :repository_uri",
+    },
+  ],
+}
+`;
+
+exports[`ruby snapshot 2`] = `
+" AWSCDK::AWSEcr::IRepository <a name="AWSCDK::AWSEcr::IRepository" id="@aws-cdk/aws-ecr.IRepository"></a>
+
+- *Extends:* AWSCDK::Core::IResource
+
+- *Implemented By:* <a href="#@aws-cdk/aws-ecr.Repository">Repository</a>, <a href="#@aws-cdk/aws-ecr.RepositoryBase">RepositoryBase</a>, <a href="#@aws-cdk/aws-ecr.IRepository">IRepository</a>
+
+Represents an ECR repository.
+
+# Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.addToResourcePolicy">add_to_resource_policy</a></code> | Add a policy statement to the repository's resource policy. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.grant">grant</a></code> | Grant the given principal identity permissions to perform the actions on this repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.grantPull">grant_pull</a></code> | Grant the given identity permissions to pull images in this repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.grantPullPush">grant_pull_push</a></code> | Grant the given identity permissions to pull and push images to this repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent">on_cloud_trail_event</a></code> | Define a CloudWatch event that triggers when something happens to this repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed">on_cloud_trail_image_pushed</a></code> | Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.onEvent">on_event</a></code> | Defines a CloudWatch event rule which triggers for repository events. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.onImageScanCompleted">on_image_scan_completed</a></code> | Defines an AWS CloudWatch event rule that can trigger a target when the image scan is completed. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.repositoryUriForDigest">repository_uri_for_digest</a></code> | Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.repositoryUriForTag">repository_uri_for_tag</a></code> | Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`. |
+
+---
+
+## \`add_to_resource_policy\` <a name="add_to_resource_policy" id="@aws-cdk/aws-ecr.IRepository.addToResourcePolicy"></a>
+
+\`\`\`ruby
+def add_to_resource_policy(statement)
+\`\`\`
+
+Add a policy statement to the repository's resource policy.
+
+### \`statement\`<sup>Required</sup> <a name="statement" id="@aws-cdk/aws-ecr.IRepository.addToResourcePolicy.parameter.statement"></a>
+
+- *Type:* AWSCDK::AWSIAM::PolicyStatement
+
+---
+
+## \`grant\` <a name="grant" id="@aws-cdk/aws-ecr.IRepository.grant"></a>
+
+\`\`\`ruby
+def grant(grantee, *actions)
+\`\`\`
+
+Grant the given principal identity permissions to perform the actions on this repository.
+
+### \`grantee\`<sup>Required</sup> <a name="grantee" id="@aws-cdk/aws-ecr.IRepository.grant.parameter.grantee"></a>
+
+- *Type:* AWSCDK::AWSIAM::IGrantable
+
+---
+
+### \`actions\`<sup>Required</sup> <a name="actions" id="@aws-cdk/aws-ecr.IRepository.grant.parameter.actions"></a>
+
+- *Type:* *String
+
+---
+
+## \`grant_pull\` <a name="grant_pull" id="@aws-cdk/aws-ecr.IRepository.grantPull"></a>
+
+\`\`\`ruby
+def grant_pull(grantee)
+\`\`\`
+
+Grant the given identity permissions to pull images in this repository.
+
+### \`grantee\`<sup>Required</sup> <a name="grantee" id="@aws-cdk/aws-ecr.IRepository.grantPull.parameter.grantee"></a>
+
+- *Type:* AWSCDK::AWSIAM::IGrantable
+
+---
+
+## \`grant_pull_push\` <a name="grant_pull_push" id="@aws-cdk/aws-ecr.IRepository.grantPullPush"></a>
+
+\`\`\`ruby
+def grant_pull_push(grantee)
+\`\`\`
+
+Grant the given identity permissions to pull and push images to this repository.
+
+### \`grantee\`<sup>Required</sup> <a name="grantee" id="@aws-cdk/aws-ecr.IRepository.grantPullPush.parameter.grantee"></a>
+
+- *Type:* AWSCDK::AWSIAM::IGrantable
+
+---
+
+## \`on_cloud_trail_event\` <a name="on_cloud_trail_event" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent"></a>
+
+\`\`\`ruby
+def on_cloud_trail_event(id, description = nil, event_pattern = nil, rule_name = nil, target = nil)
+\`\`\`
+
+Define a CloudWatch event that triggers when something happens to this repository.
+
+Requires that there exists at least one CloudTrail Trail in your account
+that captures the event. This method will not create the Trail.
+
+### \`id\`<sup>Required</sup> <a name="id" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.id"></a>
+
+- *Type:* String
+
+The id of the rule.
+
+---
+
+### \`description\`<sup>Optional</sup> <a name="description" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.description"></a>
+
+- *Type:* String
+- *Default:* No description
+
+A description of the rule's purpose.
+
+---
+
+### \`event_pattern\`<sup>Optional</sup> <a name="event_pattern" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.eventPattern"></a>
+
+- *Type:* AWSCDK::AWSEvents::EventPattern
+- *Default:* No additional filtering based on an event pattern.
+
+Additional restrictions for the event to route to the specified target.
+
+The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+
+---
+
+### \`rule_name\`<sup>Optional</sup> <a name="rule_name" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.ruleName"></a>
+
+- *Type:* String
+- *Default:* AWS CloudFormation generates a unique physical ID.
+
+A name for the rule.
+
+---
+
+### \`target\`<sup>Optional</sup> <a name="target" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailEvent.parameter.target"></a>
+
+- *Type:* AWSCDK::AWSEvents::IRuleTarget
+- *Default:* No target is added to the rule. Use \`addTarget()\` to add a target.
+
+The target to register for the event.
+
+---
+
+## \`on_cloud_trail_image_pushed\` <a name="on_cloud_trail_image_pushed" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed"></a>
+
+\`\`\`ruby
+def on_cloud_trail_image_pushed(id, description = nil, event_pattern = nil, rule_name = nil, target = nil, image_tag = nil)
+\`\`\`
+
+Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this repository.
+
+Requires that there exists at least one CloudTrail Trail in your account
+that captures the event. This method will not create the Trail.
+
+### \`id\`<sup>Required</sup> <a name="id" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.id"></a>
+
+- *Type:* String
+
+The id of the rule.
+
+---
+
+### \`description\`<sup>Optional</sup> <a name="description" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.description"></a>
+
+- *Type:* String
+- *Default:* No description
+
+A description of the rule's purpose.
+
+---
+
+### \`event_pattern\`<sup>Optional</sup> <a name="event_pattern" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.eventPattern"></a>
+
+- *Type:* AWSCDK::AWSEvents::EventPattern
+- *Default:* No additional filtering based on an event pattern.
+
+Additional restrictions for the event to route to the specified target.
+
+The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+
+---
+
+### \`rule_name\`<sup>Optional</sup> <a name="rule_name" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.ruleName"></a>
+
+- *Type:* String
+- *Default:* AWS CloudFormation generates a unique physical ID.
+
+A name for the rule.
+
+---
+
+### \`target\`<sup>Optional</sup> <a name="target" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.target"></a>
+
+- *Type:* AWSCDK::AWSEvents::IRuleTarget
+- *Default:* No target is added to the rule. Use \`addTarget()\` to add a target.
+
+The target to register for the event.
+
+---
+
+### \`image_tag\`<sup>Optional</sup> <a name="image_tag" id="@aws-cdk/aws-ecr.IRepository.onCloudTrailImagePushed.parameter.imageTag"></a>
+
+- *Type:* String
+- *Default:* Watch changes to all tags
+
+Only watch changes to this image tag.
+
+---
+
+## \`on_event\` <a name="on_event" id="@aws-cdk/aws-ecr.IRepository.onEvent"></a>
+
+\`\`\`ruby
+def on_event(id, description = nil, event_pattern = nil, rule_name = nil, target = nil)
+\`\`\`
+
+Defines a CloudWatch event rule which triggers for repository events.
+
+Use
+\`rule.addEventPattern(pattern)\` to specify a filter.
+
+### \`id\`<sup>Required</sup> <a name="id" id="@aws-cdk/aws-ecr.IRepository.onEvent.parameter.id"></a>
+
+- *Type:* String
+
+---
+
+### \`description\`<sup>Optional</sup> <a name="description" id="@aws-cdk/aws-ecr.IRepository.onEvent.parameter.description"></a>
+
+- *Type:* String
+- *Default:* No description
+
+A description of the rule's purpose.
+
+---
+
+### \`event_pattern\`<sup>Optional</sup> <a name="event_pattern" id="@aws-cdk/aws-ecr.IRepository.onEvent.parameter.eventPattern"></a>
+
+- *Type:* AWSCDK::AWSEvents::EventPattern
+- *Default:* No additional filtering based on an event pattern.
+
+Additional restrictions for the event to route to the specified target.
+
+The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+
+---
+
+### \`rule_name\`<sup>Optional</sup> <a name="rule_name" id="@aws-cdk/aws-ecr.IRepository.onEvent.parameter.ruleName"></a>
+
+- *Type:* String
+- *Default:* AWS CloudFormation generates a unique physical ID.
+
+A name for the rule.
+
+---
+
+### \`target\`<sup>Optional</sup> <a name="target" id="@aws-cdk/aws-ecr.IRepository.onEvent.parameter.target"></a>
+
+- *Type:* AWSCDK::AWSEvents::IRuleTarget
+- *Default:* No target is added to the rule. Use \`addTarget()\` to add a target.
+
+The target to register for the event.
+
+---
+
+## \`on_image_scan_completed\` <a name="on_image_scan_completed" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted"></a>
+
+\`\`\`ruby
+def on_image_scan_completed(id, description = nil, event_pattern = nil, rule_name = nil, target = nil, image_tags = nil)
+\`\`\`
+
+Defines an AWS CloudWatch event rule that can trigger a target when the image scan is completed.
+
+### \`id\`<sup>Required</sup> <a name="id" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.id"></a>
+
+- *Type:* String
+
+The id of the rule.
+
+---
+
+### \`description\`<sup>Optional</sup> <a name="description" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.description"></a>
+
+- *Type:* String
+- *Default:* No description
+
+A description of the rule's purpose.
+
+---
+
+### \`event_pattern\`<sup>Optional</sup> <a name="event_pattern" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.eventPattern"></a>
+
+- *Type:* AWSCDK::AWSEvents::EventPattern
+- *Default:* No additional filtering based on an event pattern.
+
+Additional restrictions for the event to route to the specified target.
+
+The method that generates the rule probably imposes some type of event
+filtering. The filtering implied by what you pass here is added
+on top of that filtering.
+
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+
+---
+
+### \`rule_name\`<sup>Optional</sup> <a name="rule_name" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.ruleName"></a>
+
+- *Type:* String
+- *Default:* AWS CloudFormation generates a unique physical ID.
+
+A name for the rule.
+
+---
+
+### \`target\`<sup>Optional</sup> <a name="target" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.target"></a>
+
+- *Type:* AWSCDK::AWSEvents::IRuleTarget
+- *Default:* No target is added to the rule. Use \`addTarget()\` to add a target.
+
+The target to register for the event.
+
+---
+
+### \`image_tags\`<sup>Optional</sup> <a name="image_tags" id="@aws-cdk/aws-ecr.IRepository.onImageScanCompleted.parameter.imageTags"></a>
+
+- *Type:* Array<String>
+- *Default:* Watch the changes to the repository with all image tags
+
+Only watch changes to the image tags spedified.
+
+Leave it undefined to watch the full repository.
+
+---
+
+## \`repository_uri_for_digest\` <a name="repository_uri_for_digest" id="@aws-cdk/aws-ecr.IRepository.repositoryUriForDigest"></a>
+
+\`\`\`ruby
+def repository_uri_for_digest(digest = nil)
+\`\`\`
+
+Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`.
+
+ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY[@DIGEST]
+
+### \`digest\`<sup>Optional</sup> <a name="digest" id="@aws-cdk/aws-ecr.IRepository.repositoryUriForDigest.parameter.digest"></a>
+
+- *Type:* String
+
+Image digest to use (tools usually default to the image with the "latest" tag if omitted).
+
+---
+
+## \`repository_uri_for_tag\` <a name="repository_uri_for_tag" id="@aws-cdk/aws-ecr.IRepository.repositoryUriForTag"></a>
+
+\`\`\`ruby
+def repository_uri_for_tag(tag = nil)
+\`\`\`
+
+Returns the URI of the repository for a certain tag. Can be used in \`docker push/pull\`.
+
+ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY[:TAG]
+
+### \`tag\`<sup>Optional</sup> <a name="tag" id="@aws-cdk/aws-ecr.IRepository.repositoryUriForTag.parameter.tag"></a>
+
+- *Type:* String
+
+Image tag to use (tools usually default to "latest" if omitted).
+
+---
+
+# Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.node">node</a></code> | <code>AWSCDK::Core::ConstructNode</code> | The construct tree node for this construct. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.env">env</a></code> | <code>AWSCDK::Core::ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.stack">stack</a></code> | <code>AWSCDK::Core::Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.repositoryArn">repository_arn</a></code> | <code>String</code> | The ARN of the repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.repositoryName">repository_name</a></code> | <code>String</code> | The name of the repository. |
+| <code><a href="#@aws-cdk/aws-ecr.IRepository.property.repositoryUri">repository_uri</a></code> | <code>String</code> | The URI of this repository (represents the latest image):. |
+
+---
+
+## \`node\`<sup>Required</sup> <a name="node" id="@aws-cdk/aws-ecr.IRepository.property.node"></a>
+
+\`\`\`ruby
+attr_reader :node
+\`\`\`
+
+- *Type:* AWSCDK::Core::ConstructNode
+
+The construct tree node for this construct.
+
+---
+
+## \`env\`<sup>Required</sup> <a name="env" id="@aws-cdk/aws-ecr.IRepository.property.env"></a>
+
+\`\`\`ruby
+attr_reader :env
+\`\`\`
+
+- *Type:* AWSCDK::Core::ResourceEnvironment
+
+The environment this resource belongs to.
+
+For resources that are created and managed by the CDK
+(generally, those created by creating new class instances like Role, Bucket, etc.),
+this is always the same as the environment of the stack they belong to;
+however, for imported resources
+(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+that might be different than the stack they were imported into.
+
+---
+
+## \`stack\`<sup>Required</sup> <a name="stack" id="@aws-cdk/aws-ecr.IRepository.property.stack"></a>
+
+\`\`\`ruby
+attr_reader :stack
+\`\`\`
+
+- *Type:* AWSCDK::Core::Stack
+
+The stack in which this resource is defined.
+
+---
+
+## \`repository_arn\`<sup>Required</sup> <a name="repository_arn" id="@aws-cdk/aws-ecr.IRepository.property.repositoryArn"></a>
+
+\`\`\`ruby
+attr_reader :repository_arn
+\`\`\`
+
+- *Type:* String
+
+The ARN of the repository.
+
+---
+
+## \`repository_name\`<sup>Required</sup> <a name="repository_name" id="@aws-cdk/aws-ecr.IRepository.property.repositoryName"></a>
+
+\`\`\`ruby
+attr_reader :repository_name
+\`\`\`
+
+- *Type:* String
+
+The name of the repository.
+
+---
+
+## \`repository_uri\`<sup>Required</sup> <a name="repository_uri" id="@aws-cdk/aws-ecr.IRepository.property.repositoryUri"></a>
+
+\`\`\`ruby
+attr_reader :repository_uri
+\`\`\`
+
+- *Type:* String
+
+The URI of this repository (represents the latest image):.
+
+ACCOUNT.dkr.ecr.REGION.amazonaws.com/REPOSITORY
+
+---
+"
+`;
+
 exports[`typescript snapshot 1`] = `
 {
   "displayName": "IRepository",

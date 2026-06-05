@@ -2,7 +2,9 @@ import { Documentation, Language } from '../../../src';
 import { JsiiEntity } from '../../../src/docgen/schema';
 
 describe('simple link formatter', () => {
-  test.each(Language.values())('%s snapshot', async (language) => {
+  // Ruby is excluded here because these tests download real packages from NPM (e.g. @aws-cdk/aws-ecr@1.106.0 or constructs@10.0.78),
+  // which do not target Ruby. Since Ruby support is not yet published in any package on NPM, we cannot run this test for Ruby yet.
+  test.each(Language.values().filter((l) => l !== Language.RUBY))('%s snapshot', async (language) => {
     const docs = await Documentation.forPackage(language === Language.GO ? 'constructs@10.0.78' : '@aws-cdk/aws-ecr@1.106.0');
     try {
       const markdown = await docs.toMarkdown({
@@ -17,7 +19,9 @@ describe('simple link formatter', () => {
 });
 
 describe('complex link formatter', () => {
-  test.each(Language.values())('%s snapshot', async (language) => {
+  // Ruby is excluded here because these tests download real packages from NPM (e.g. @aws-cdk/aws-ecr@1.106.0 or constructs@10.0.78),
+  // which do not target Ruby. Since Ruby support is not yet published in any package on NPM, we cannot run this test for Ruby yet.
+  test.each(Language.values().filter((l) => l !== Language.RUBY))('%s snapshot', async (language) => {
     const docs = await Documentation.forPackage(language === Language.GO ? 'constructs@10.0.78' : '@aws-cdk/aws-ecr@1.106.0');
     try {
       const markdown = await docs.toMarkdown({

@@ -17,8 +17,10 @@ import { CSharpTranspile } from '../transpile/csharp';
 import { GoTranspile } from '../transpile/go';
 import { JavaTranspile } from '../transpile/java';
 import { PythonTranspile } from '../transpile/python';
+import { RubyTranspile } from '../transpile/ruby';
 import { Transpile, Language } from '../transpile/transpile';
 import { TypeScriptTranspile } from '../transpile/typescript';
+
 
 // https://github.com/aws/jsii/blob/v1.122.0/packages/jsii-reflect/lib/assembly.ts#L233
 const NOT_FOUND_IN_ASSEMBLY_REGEX = /Type '(.*)\..*' not found in assembly (.*)$/;
@@ -460,6 +462,10 @@ export const LANGUAGE_SPECIFIC = {
   [Language.GO.toString()]: {
     transpile: new GoTranspile(),
     rosettaTarget: TargetLanguage.GO,
+  },
+  [Language.RUBY.toString()]: {
+    transpile: new RubyTranspile(),
+    rosettaTarget: TargetLanguage.RUBY,
   },
 };
 

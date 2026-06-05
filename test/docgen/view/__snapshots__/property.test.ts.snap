@@ -148,6 +148,43 @@ repository_catalog_data: typing.Any
 "
 `;
 
+exports[`ruby snapshot 1`] = `
+{
+  "default": undefined,
+  "displayName": "repository_catalog_data",
+  "docs": {
+    "links": [
+      "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata",
+    ],
+    "summary": "\`AWS::ECR::PublicRepository.RepositoryCatalogData\`.",
+  },
+  "fqn": "AWSCDK::AWSEcr::CfnPublicRepositoryProps.property.repository_catalog_data",
+  "id": "@aws-cdk/aws-ecr.CfnPublicRepositoryProps.property.repositoryCatalogData",
+  "optional": true,
+  "type": {
+    "formattingPattern": "Object",
+  },
+  "usage": "attr_reader :repository_catalog_data",
+}
+`;
+
+exports[`ruby snapshot 2`] = `
+" \`repository_catalog_data\`<sup>Optional</sup> <a name="repository_catalog_data" id="@aws-cdk/aws-ecr.CfnPublicRepositoryProps.property.repositoryCatalogData"></a>
+
+\`\`\`ruby
+attr_reader :repository_catalog_data
+\`\`\`
+
+- *Type:* Object
+
+\`AWS::ECR::PublicRepository.RepositoryCatalogData\`.
+
+> [http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html#cfn-ecr-publicrepository-repositorycatalogdata)
+
+---
+"
+`;
+
 exports[`typescript snapshot 1`] = `
 {
   "default": undefined,

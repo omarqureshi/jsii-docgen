@@ -236,6 +236,65 @@ all image tags within the repository will be immutable which will prevent them f
 "
 `;
 
+exports[`ruby snapshot 1`] = `
+{
+  "displayName": "AWSCDK::AWSEcr::TagMutability",
+  "docs": {
+    "summary": "The tag mutability setting for your repository.",
+  },
+  "fqn": "AWSCDK::AWSEcr::TagMutability",
+  "id": "@aws-cdk/aws-ecr.TagMutability",
+  "members": [
+    {
+      "displayName": "MUTABLE",
+      "docs": {
+        "summary": "allow image tags to be overwritten.",
+      },
+      "fqn": "AWSCDK::AWSEcr::TagMutability::MUTABLE",
+      "id": "@aws-cdk/aws-ecr.TagMutability.MUTABLE",
+    },
+    {
+      "displayName": "IMMUTABLE",
+      "docs": {
+        "summary": "all image tags within the repository will be immutable which will prevent them from being overwritten.",
+      },
+      "fqn": "AWSCDK::AWSEcr::TagMutability::IMMUTABLE",
+      "id": "@aws-cdk/aws-ecr.TagMutability.IMMUTABLE",
+    },
+  ],
+}
+`;
+
+exports[`ruby snapshot 2`] = `
+" AWSCDK::AWSEcr::TagMutability <a name="AWSCDK::AWSEcr::TagMutability" id="@aws-cdk/aws-ecr.TagMutability"></a>
+
+The tag mutability setting for your repository.
+
+# Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@aws-cdk/aws-ecr.TagMutability.MUTABLE">MUTABLE</a></code> | allow image tags to be overwritten. |
+| <code><a href="#@aws-cdk/aws-ecr.TagMutability.IMMUTABLE">IMMUTABLE</a></code> | all image tags within the repository will be immutable which will prevent them from being overwritten. |
+
+---
+
+## \`MUTABLE\` <a name="MUTABLE" id="@aws-cdk/aws-ecr.TagMutability.MUTABLE"></a>
+
+allow image tags to be overwritten.
+
+---
+
+
+## \`IMMUTABLE\` <a name="IMMUTABLE" id="@aws-cdk/aws-ecr.TagMutability.IMMUTABLE"></a>
+
+all image tags within the repository will be immutable which will prevent them from being overwritten.
+
+---
+
+"
+`;
+
 exports[`typescript snapshot 1`] = `
 {
   "displayName": "TagMutability",

@@ -228,6 +228,62 @@ tree inspector to collect and process attributes.
 "
 `;
 
+exports[`ruby snapshot 1`] = `
+{
+  "displayName": "inspect",
+  "docs": {
+    "summary": "Examines the CloudFormation resource and discloses attributes.",
+  },
+  "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.inspect",
+  "id": "@aws-cdk/aws-ecr.CfnPublicRepository.inspect",
+  "parameters": [
+    {
+      "default": undefined,
+      "displayName": "inspector",
+      "docs": {
+        "summary": "- tree inspector to collect and process attributes.",
+      },
+      "fqn": "AWSCDK::AWSEcr::CfnPublicRepository.inspect.parameter.inspector",
+      "id": "@aws-cdk/aws-ecr.CfnPublicRepository.inspect.parameter.inspector",
+      "optional": undefined,
+      "type": {
+        "formattingPattern": "%",
+        "types": [
+          {
+            "displayName": "TreeInspector",
+            "fqn": "AWSCDK::Core::TreeInspector",
+            "id": "@aws-cdk/core.TreeInspector",
+            "packageName": "@aws-cdk/core",
+            "packageVersion": "99.99.99",
+          },
+        ],
+      },
+      "variadic": false,
+    },
+  ],
+  "usage": "def inspect(inspector)",
+}
+`;
+
+exports[`ruby snapshot 2`] = `
+" \`inspect\` <a name="inspect" id="@aws-cdk/aws-ecr.CfnPublicRepository.inspect"></a>
+
+\`\`\`ruby
+def inspect(inspector)
+\`\`\`
+
+Examines the CloudFormation resource and discloses attributes.
+
+# \`inspector\`<sup>Required</sup> <a name="inspector" id="@aws-cdk/aws-ecr.CfnPublicRepository.inspect.parameter.inspector"></a>
+
+- *Type:* AWSCDK::Core::TreeInspector
+
+tree inspector to collect and process attributes.
+
+---
+"
+`;
+
 exports[`typescript snapshot 1`] = `
 {
   "displayName": "inspect",
