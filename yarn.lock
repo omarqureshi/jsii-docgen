@@ -3482,7 +3482,7 @@ jsii-reflect@^1.133.0:
 
 "jsii@file:../jsii-compiler/dist/js/jsii-0.0.0.tgz", jsii@~5.9.1:
   version "0.0.0"
-  resolved "file:../jsii-compiler/dist/js/jsii-0.0.0.tgz#fdcbc18da01b7a795d9ef43b1bb939b3eb3cdfec"
+  resolved "file:../jsii-compiler/dist/js/jsii-0.0.0.tgz#5a21d7a631ff80579c669b648b9f86739104197c"
   dependencies:
     "@jsii/check-node" "1.132.0"
     "@jsii/spec" "1.132.0"

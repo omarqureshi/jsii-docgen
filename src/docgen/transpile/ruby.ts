@@ -45,58 +45,22 @@ const RUBY_RESERVED_NAMES = new Set([
   'send',
 ]);
 
-const DEFAULT_ACRONYMS = [
-  'AWS',
-  'S3',
-  'IAM',
-  'VPC',
-  'CDK',
-  'SQS',
-  'SNS',
-  'EC2',
-  'RDS',
-  'KMS',
-  'ECS',
-  'EKS',
-  'EFS',
-  'ELB',
-  'WAF',
-  'SSM',
-  'SES',
-  'SAM',
-  'MSK',
-  'MWAA',
-  'ACM',
-  'EMR',
-  'FSX',
-  'QLDB',
-  'RAM',
-  'FMS',
-  'DAX',
-  'DMS',
-  'DLM',
-  'FIS',
-  'IVS',
-  'CUR',
-  'OAM',
-  'PCS',
-  'RUM',
-  'CE',
-  'APS',
-  'DSQL',
-  'ARN',
-  'API',
-  'DB',
-  'CIDR',
-  'IP',
-  'DNS',
-];
+/**
+ * Returns the acronym list declared by an assembly's Ruby target configuration.
+ *
+ * Acronyms are CDK data: they are declared in the assembly's `targets.ruby.acronyms`
+ * (embedded by the compiler into every .jsii). An assembly that declares none gets
+ * plain PascalCase.
+ */
+function assemblyAcronyms(assembly: reflect.Assembly): string[] {
+  return assembly.targets?.ruby?.acronyms ?? [];
+}
 
 /**
  * Converts a camelCase/PascalCase identifier name to snake_case format.
  * Prepends an underscore if the name matches a reserved Ruby keyword or starts with a digit.
  */
-function toSnakeCase(name: string): string {
+export function toSnakeCase(name: string): string {
   const snake = Case.snake(name);
   if (RUBY_RESERVED_NAMES.has(snake)) {
     return `_${snake}`;
@@ -111,7 +75,7 @@ function toSnakeCase(name: string): string {
  * Converts a hyphenated/cased name to PascalCase for Ruby, preserving case-insensitive acronyms.
  * Restores fully capitalized acronyms (e.g. AWS, S3, VPC) using word boundaries.
  */
-export function toRubyPascalCase(name: string, acronyms: string[] = DEFAULT_ACRONYMS): string {
+export function toRubyPascalCase(name: string, acronyms: string[] = []): string {
   if (name.includes('-')) {
     return name.split('-').map((p) => toRubyPascalCase(p, acronyms)).join('');
   }
@@ -172,11 +136,11 @@ function rubyFullTypeName(type: reflect.Type): string {
   try {
     assembly = system.findAssembly(assemblyName);
   } catch {
-    const acronyms = DEFAULT_ACRONYMS;
-    return segments.map((p) => toRubyPascalCase(p, acronyms)).join('::');
+    // no assembly in hand means no declared acronyms
+    return segments.map((p) => toRubyPascalCase(p)).join('::');
   }
 
-  const acronyms = assembly.targets?.ruby?.acronyms ?? DEFAULT_ACRONYMS;
+  const acronyms = assemblyAcronyms(assembly);
   const assemblyModule = assembly.targets?.ruby?.module ?? rubyModuleForAssembly(assemblyName, acronyms);
   const result = [];
 
@@ -373,7 +337,7 @@ export class RubyTranspile extends transpile.TranspileBase {
   public enum(enu: reflect.EnumType): transpile.TranspiledEnum {
     return {
       fqn: this.type(enu).fqn,
-      name: toRubyPascalCase(enu.name, enu.assembly.targets?.ruby?.acronyms ?? DEFAULT_ACRONYMS),
+      name: toRubyPascalCase(enu.name, assemblyAcronyms(enu.assembly)),
     };
   }
 
@@ -489,7 +453,7 @@ export class RubyTranspile extends transpile.TranspileBase {
    */
   public type(type: reflect.Type): transpile.TranspiledType {
     const submodule = this.findSubmodule(type);
-    const acronyms = type.assembly.targets?.ruby?.acronyms ?? DEFAULT_ACRONYMS;
+    const acronyms = assemblyAcronyms(type.assembly);
 
     const fqn = rubyFullTypeName(type);
     const fqnParts = fqn.split('::');
@@ -516,7 +480,7 @@ export class RubyTranspile extends transpile.TranspileBase {
     moduleLike: reflect.ModuleLike,
   ): transpile.TranspiledModuleLike {
     const assembly = moduleLike instanceof reflect.Submodule ? moduleLike.parent : (moduleLike as reflect.Assembly);
-    const acronyms = assembly.targets?.ruby?.acronyms ?? DEFAULT_ACRONYMS;
+    const acronyms = assemblyAcronyms(assembly);
 
     if (moduleLike instanceof reflect.Submodule) {
       const parentRubyModule = assembly.targets?.ruby?.module ?? rubyModuleForAssembly(assembly.name, acronyms);
