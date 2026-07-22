@@ -111,8 +111,10 @@ test('specify languages and split-by-submodule creates submodule files next to o
 test.each([
   ['lib-with-intersections', '>=5.9.5'],
 ])('docs for library: %s', async (libraryName, minimumRosettaRange) => {
-  // TODO: Remove me post merge
-  // Previous version: if (!semver.satisfies(ROSETTA_VERSION, minimumRosettaRange)) {
+  // The minimum-rosetta floor only means something against a *released*
+  // rosetta. Local fork builds (the file:../jsii-rosetta pin) report version
+  // 0.0.0, which can never satisfy a floor like >=5.9.5 — for those builds
+  // the floor is waived and the test always runs, which is strictly stricter.
   if (ROSETTA_VERSION !== '0.0.0' && !semver.satisfies(ROSETTA_VERSION, minimumRosettaRange)) {
     console.log(`Skipping test for ${libraryName} because jsii-rosetta version ${ROSETTA_VERSION} does not satisfy ${minimumRosettaRange}`);
     return;

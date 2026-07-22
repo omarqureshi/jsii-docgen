@@ -86,6 +86,21 @@ new RosettaPeerDependency(project, {
   },
 });
 
+// ---------------------------------------------------------------------------
+// Fork-preview wiring (ruby-language-bindings branch only): build against the
+// sibling fork checkouts of the Ruby-aware compiler and rosetta — the same ../
+// sibling layout the blog publish pipeline recreates in CI. Declared HERE
+// (after RosettaPeerDependency, so these pins win the dependency merge) rather
+// than hand-edited into package.json, which `npx projen` silently clobbers.
+project.addDevDeps(
+  'jsii@file:../jsii-compiler/dist/js/jsii-0.0.0.tgz',
+  'jsii-rosetta@file:../jsii-rosetta/dist/js/jsii-rosetta-0.0.0.tgz',
+);
+project.package.addPackageResolutions(
+  'jsii@file:../jsii-compiler/dist/js/jsii-0.0.0.tgz',
+  'jsii-rosetta@file:../jsii-rosetta/dist/js/jsii-rosetta-0.0.0.tgz',
+);
+
 project.github?.tryFindWorkflow('release')?.file?.patch(JsonPatch.add('/jobs/release/env/NODE_OPTIONS', '--max_old_space_size=4096'));
 project.github?.tryFindWorkflow('build')?.file?.patch(JsonPatch.add('/jobs/build/env/NODE_OPTIONS', '--max_old_space_size=4096'));
 
